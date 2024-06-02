@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimalist Table and Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+        }
+        thead {
+            background-color: #000;
+            color: #fff;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #000;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+        form {
+            text-align: center;
+        }
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 20px;
+            border: 2px solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <table>
+        <thead>
+        <tr>
+            <th>Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ls : ${list}">
+            <td th:text="${ls}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <form action="/Welcome" target="_blank">
+            <button>Вернуться к поиску</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
