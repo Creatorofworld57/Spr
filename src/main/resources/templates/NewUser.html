@@ -67,7 +67,7 @@
     <input type="text" id="Role" placeholder="Enter your Role">
     <button onclick="sendData()">Send</button>
 </div>
-<button class="Back" onclick="window.location.href='http://localhost:8080/Welcome'">Назад</button>
+<button class="Back" onclick="window.location.href='http://localhost:8080/api/Welcome'">Назад</button>
 
 <script>
     async function sendData() {
@@ -92,7 +92,8 @@
 
             if (response.ok) {
                 alert('Data sent successfully!');
-                window.location.href = `http://localhost:8080/Welcome`;
+                window.location.href = `http://localhost:8080/api/Welcome`;
+                console.log(window.location.href)
             } else {
                 alert('Failed to send data.');
             }

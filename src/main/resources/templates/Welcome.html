@@ -58,10 +58,8 @@
             align-items: center;
             gap: 10px;
         }
-        .Reg_button{
+        .Reg_button, .All_button {
             position: absolute;
-            top: 20px;
-            right: 20px;
             background-color: #000;
             color: #fff;
             padding: 10px 20px;
@@ -70,9 +68,21 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s, color 0.3s;
-
         }
-         button {
+        .Reg_button {
+            top: 20px;
+            right: 20px;
+        }
+        .All_button {
+            top: 70px;
+            right: 20px;
+        }
+        .Reg_button:hover, .All_button:hover {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+        button {
             padding: 10px;
             font-size: 16px;
             background-color: #000;
@@ -82,15 +92,15 @@
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
-         button:hover{
-             background-color: #fff;
-             color: #000;
-             border: 2px solid #000;
-         }
-       input{
-           padding: 10px;
-           font-size: 16px;
-       }
+        button:hover {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +111,7 @@
     <button onclick="redirectToUrl()">Go</button>
 </div>
 <button class="Reg_button" onclick="window.location.href='http://localhost:8080/api/newUser'">Зарегаться</button>
+<button class="All_button" onclick="window.location.href='http://localhost:8080/api/All'">All</button>
 
 <script>
     function redirectToUrl() {

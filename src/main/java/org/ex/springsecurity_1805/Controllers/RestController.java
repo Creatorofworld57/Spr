@@ -16,12 +16,6 @@ import java.util.List;
 public class RestController {
 
     private ServiceApp serviceApp;
-
-    @GetMapping("/All")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
-    public List<Application> All(){
-        return serviceApp.allApplications();
-    }
     //@PreAuthorize("hasAuthority('ROLE_ADMIN')")
     //@GetMapping("/{id}")
     //public Application applicationByID(@PathVariable int id){
@@ -31,7 +25,6 @@ public class RestController {
     @PostMapping("/newUserPost")
     public void addUser(@RequestBody Usermain user){
         serviceApp.addUser(user);
-
     }
 
 

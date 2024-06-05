@@ -41,7 +41,7 @@ public class Configuration1{
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth->auth.requestMatchers("/api/welcomePage","/api/newUser","/Welcome","/api/login","/api/newUserPost").permitAll()
+                .authorizeHttpRequests(auth->auth.requestMatchers("/api/newUser","api/Welcome","/api/login","/api/newUserPost").permitAll()
                 .requestMatchers("/api/**").authenticated())
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
 

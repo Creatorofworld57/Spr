@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Minimalist Table and Form</title>
+    <title>Info about person</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -62,7 +62,7 @@
 </head>
 <body>
 <div class="container">
-    <table>
+<table>
         <thead>
         <tr>
             <th>Data</th>
@@ -76,8 +76,8 @@
     </table>
 
     <div>
-        <form action="/Welcome" target="_blank">
-            <button>Вернуться к поиску</button>
+        <form action="http://localhost:8080/api/Welcome" target="_blank">
+            <button onclick="window.onunload">Вернуться к поиску</button>
         </form>
     </div>
 </div>
